@@ -239,7 +239,7 @@ class MainMenuState extends MusicBeatState
 									case 'play':
 										MusicBeatState.switchState(new StoryMenuState());
 									case 'options':
-										MusicBeatState.switchState(new OptionsState());
+										LoadingState.loadAndSwitchState(new options.OptionsState());
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
 									case 'awards':
