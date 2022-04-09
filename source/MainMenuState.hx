@@ -34,7 +34,7 @@ class MainMenuState extends MusicBeatState
 	
 	var optionShit:Array<String> = [
 		'play',
-                'options',
+		'options',
 		'freeplay',
 		//#if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
@@ -131,6 +131,7 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Funkin' v" + Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -236,18 +237,9 @@ class MainMenuState extends MusicBeatState
 								switch (daChoice)
 								{
 									case 'play':
-                                                                                PlayState.storyPlaylist = ['song-of-drowning', 'fate'];
-                                                                                PlayState.isStoryMode = true;
-                                                                                PlayState.storyDifficulty = 2;
-                                                                                PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyPlaylist[0].toLowerCase());
-                                                                                PlayState.storyWeek = 0;
-                                                                                PlayState.campaignScore = 0;
-                                                                                new FlxTimer().start(0.8, function(tmr:FlxTimer)
-					                                            {						
-                                                                                            LoadingState.loadAndSwitchState(new PlayState(), true);
-                                                                                    });
+										MusicBeatState.switchState(new StoryMenuState());
 									case 'options':
-										LoadingState.loadAndSwitchState(new options.OptionsState());
+										MusicBeatState.switchState(new OptionsState());
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
 									case 'awards':
