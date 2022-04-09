@@ -236,7 +236,13 @@ class MainMenuState extends MusicBeatState
 								switch (daChoice)
 								{
 									case 'play':
-										MusicBeatState.switchState(new StoryMenuState());
+                                                                                PlayState.storyPlaylist = ['song-of-drowning', 'fate'];
+                                                                                PlayState.isStoryMode = true;
+                                                                                PlayState.storyDifficulty = 2;
+                                                                                PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + '-hard', PlayState.storyPlaylist[0].toLowerCase());
+                                                                                PlayState.storyWeek = 0;
+                                                                                PlayState.campaignScore = 0;
+                                                                                new FlxTimer().start(0.8, function(tmr:FlxTimer)
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
 									case 'freeplay':
