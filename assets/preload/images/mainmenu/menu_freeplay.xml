@@ -3,5 +3,5 @@
 	<!-- Created with Adobe Animate version 21.0.1.37179 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="freeplay basic0000" x="47" y="308" width="493" height="140" pivotX="8.4" pivotY="9.8"/>
-	<SubTexture name="freeplay white0000" x="47" y="308" width="493" height="140" pivotX="8.4" pivotY="9.8" frameX="0" frameY="-3" frameWidth="796" frameHeight="181"/>
+	<SubTexture name="freeplay white0000" x="47" y="308" width="493" height="140" pivotX="8.4" pivotY="9.8"/>
 </TextureAtlas>
