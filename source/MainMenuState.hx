@@ -243,6 +243,9 @@ class MainMenuState extends MusicBeatState
                                                                                 PlayState.storyWeek = 0;
                                                                                 PlayState.campaignScore = 0;
                                                                                 new FlxTimer().start(0.8, function(tmr:FlxTimer)
+					                                            {						
+                                                                                            LoadingState.loadAndSwitchState(new PlayState(), true);
+                                                                                    });
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
 									case 'freeplay':
